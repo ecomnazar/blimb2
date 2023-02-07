@@ -1,0 +1,367 @@
+$color1: #fff;
+$color2: #eee;
+$color3: #333;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #735A80, #4D7394);
+    overflow: hidden;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row2{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    background-color: transparent;
+    border: 4px solid $color1;
+    color: $color1;
+    border-radius: 25px;
+    padding: 12px 22px;
+    font-size: 17px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*  */
+
+.banner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 0;
+    text-align: center;
+    background: linear-gradient(90deg, #4c3b55, #3a5368);
+    h3{
+        font-weight: normal;
+        color: $color1;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    p{
+        color: $color1;
+        font-size: 14px;
+        margin-top: 8px;
+    }
+}
+
+.header{
+    padding-top: 100px;
+    .row{
+        .eye{
+            width: 70px;
+        }
+        .row2{
+            img{
+                margin-left: 20px;
+                width: 30px;
+            }
+            h2{
+                font-size: 14px;
+                font-weight: normal;
+                color: $color2;
+                border: 2px solid $color2;
+                padding: 5px;
+                padding-top: 4px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    .headerMiddle, .headerMiddleHide{
+        width: 625px;
+        margin: 0 auto;
+        h2{
+            font-weight: normal;
+            color: $color1;
+            font-size: 35px;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $color1;
+            margin-bottom: 15px;
+        }
+        .row2{
+            p{
+                margin-bottom: 1px;
+                margin-left: 3px;
+            }
+        }
+        .checkButton{
+            margin-top: 30px;
+        }
+        button{
+            margin-left: 25px;
+            &:hover{
+                border-color: rgb(90, 89, 89);
+                transition: all .2s ease-in-out;
+            }
+        }
+        .check{
+            background-color: transparent;
+            padding: 20px;
+        }
+        .relax{
+            text-align: center;
+        }
+        .count{
+            text-align: center;
+            font-size: 90px;
+            font-weight: bold;
+        }
+        .wait{
+            text-align: center;
+        }
+        .box{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color3;
+            animation-name: box;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes box {
+            0%{
+                top: 15%;
+            }
+            20%{
+                top: 50%;
+            }
+            40%{
+                top: 85%;
+            }
+            60% {
+                top: 50%;
+            }
+            100% {
+                top: 15%;
+            }
+        }
+        .box2{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color3;
+            animation-name: box2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes box2 {
+            0%{
+                left: 15%;
+            }
+            20%{
+                left: 50%;
+            }
+            40%{
+                left: 85%;
+            }
+            60% {
+                left: 50%;
+            }
+            100% {
+                left: 15%;
+            }
+        }
+        .box3{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 50%;
+            left: 15%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color3;
+            animation-name: box3;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes box3 {
+            0%{
+                left: 15%;
+                top: 15%;
+            }
+            10%{
+                left: 50%;
+                top: 50%;
+            }
+            20%{
+                left: 85%;
+                top: 85%;
+            }
+            30%{
+                left: 50%;
+                top: 85%;
+            }
+            40%{
+                left: 15%;
+                top: 85%;
+            }
+            50%{
+                left: 50%;
+                top: 50%;
+            }
+            60% {
+                left: 85%;
+                top: 15%;
+            }
+            70%{
+                left: 50%;
+                top: 15%;
+            }
+            80%{
+                left: 15%;
+                top: 15%;
+            }
+            100% {
+                left: 15%;
+                top: 15%;
+            }
+        }
+        .box4{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 60%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color1;
+            animation-name: box4;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes box4 {
+            0%{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            50%{
+                transform: scale(.8);
+                opacity: .7;
+            }
+            100%{
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        .box5{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 60%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color1;
+            animation: box5 5s linear infinite;
+        }
+        @keyframes box5 {
+            0%{
+                transform: rotate(0deg) translate(-160px) rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg) translate(-160px) rotate(-360deg);
+            }
+        }
+        .box6{
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            top: 60%;
+            left: 49%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $color1;
+            animation: box6 5s linear infinite;
+        }
+        @keyframes box6 {
+            0%{
+                transform: rotate(360deg) translate(-160px) rotate(-360deg);
+            }
+            100%{
+                transform: rotate(0deg) translate(-160px) rotate(0deg);
+            }
+        }
+    }
+    .headerMiddle{
+        opacity: 1;
+        visibility: visible;
+        transition: all .3 ease-in-out;
+    }
+    .headerMiddleHide{
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+        transition: all .3 ease-in-out;
+    }
+    .headerMiddle2, .headerMiddle2Hide{
+        text-align: center;
+        .eye2{
+            width: 100px;
+            cursor: pointer;
+        }
+        button{
+            display: block;
+            margin: 75px auto 20px;
+            &:hover{
+                border-color: rgb(90, 89, 89);
+                transition: all .2s ease-in-out;
+            }
+        }
+        a{
+            color: $color1;
+            margin-top: 20px;
+            text-decoration: none;
+            &:hover{
+                border-bottom: 1px solid $color2;
+            }
+        }
+    }
+    .headerMiddle2{
+        opacity: 1;
+        visibility: visible;
+        transition: all .3s ease-in-out;
+    }
+    .headerMiddle2Hide{
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s ease-in-out;
+        display: none;
+    }
+}
