@@ -201,6 +201,11 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
     }
   }
 
+  const onClickBack = () => {
+    setHide(false)
+    setHide1(false)
+  }
+
 
 
   return (
@@ -208,7 +213,7 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         <div className="header">
             <div className="row">
                 <div>
-                    {hide && <img className='eye' src="images/eye.png" alt="" />}
+                    <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" />
                 </div>
                 <div className='row2'>
                     <h2 onClick={onClickLanguage}>{languages[activeIndex]}</h2>
