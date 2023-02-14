@@ -37,8 +37,16 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
   const [hide13, setHide13] = React.useState(false)
   const [hide14, setHide14] = React.useState(false)
   const [count, setCount] = React.useState(20)
+  const [onBack, setOnBack] = React.useState(false)
 
   
+  let [seconds, setSeconds] = React.useState(0)
+  let [secondsTwo, setSecondsTwo] = React.useState(0)
+  let [minutes, setMinutes] = React.useState(0)
+  let [minutesTwo, setMinutesTwo] = React.useState(0)
+  let [hours, setHours] = React.useState(0)
+  let [hoursTwo, setHoursTwo] = React.useState(0)
+
 
   const onClickStart = () => {
     setHide(true)
@@ -47,6 +55,7 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
 
   const onClickStart2 = () => {
     setHide1(false)
+    setHide14(false)
     setHide2(true)
     setCount(20)
     setInterval(() => {
@@ -63,6 +72,8 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
     let nine = setInterval(show9, 180000)
     let ten = setInterval(show10, 200000)
     let eleven = setInterval(show11, 220000)
+    let twelve = setInterval(show12, 230000)
+
     function show1(){
         setHide2(false)
         setHide3(true)
@@ -72,6 +83,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         if(count === 20){
             clearInterval(first)
             soundPlay()
+        }
+        if(count === 0){
+            clearInterval(first)
         }
     }
     function show2(){
@@ -84,6 +98,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
             clearInterval(second)
             soundPlay()
         }
+        if(count === 0){
+            clearInterval(second)
+        }
     }
     function show3(){
         setHide4(false)
@@ -94,6 +111,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         if(count === 20){
             clearInterval(third)
             soundPlay()
+        }
+        if(count === 0){
+            clearInterval(third)
         }
     }
     function show4(){
@@ -106,6 +126,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
             clearInterval(forth)
             soundPlay()
         }
+        if(count === 0){
+            clearInterval(forth)
+        }
     }
     function show5(){
         setHide6(false)
@@ -116,6 +139,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         if(count === 20){
             clearInterval(fifth)
             soundPlay()
+        }
+        if(count === 0){
+            clearInterval(fifth)
         }
     }
     function show6(){
@@ -128,6 +154,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
             clearInterval(six)
             soundPlay()
         }
+        if(count === 0){
+            clearInterval(six)
+        }
     }
     function show7(){
         setHide8(false)
@@ -138,6 +167,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         if(count === 20){
             clearInterval(seven)
             soundPlay()
+        }
+        if(count === 0){
+            clearInterval(seven)
         }
     }
     function show8(){
@@ -150,6 +182,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
             clearInterval(eight)
             soundPlay()
         }
+        if(count === 0){
+            clearInterval(eight)
+        }
     }
     function show9(){
         setHide10(false)
@@ -160,6 +195,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         if(count === 20){
             clearInterval(nine)
             soundPlay()
+        }
+        if(count === 0){
+            clearInterval(nine)
         }
     }
     function show10(){
@@ -172,6 +210,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
             clearInterval(ten)
             soundPlay()
         }
+        if(count === 0){
+            clearInterval(ten)
+        }
     }
     function show11(){
         setHide12(false)
@@ -180,9 +221,31 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
         setCount(20)
         setCount(prev => prev - 1)
         if(count === 20){
+            clearInterval(eleven)
+        }
+        if(count === 0){
+            clearInterval(eleven)
         }
     }
+    function show12(){
+        setHide13(false)
+        setHide14(true)
+        console.log('12')
+        setCount(20)    
+        setInterval(() => {
+            setSeconds(seconds += 1)
+            if(seconds === 60){
+                setSeconds(seconds = 0)
+                setMinutes(minutes += 1)
+                clearInterval(twelve)
+            }
+            if(minutes === 60){
+                setHours(hours += 1)
+            }
+        }, 1000)
+    }
 }
+
 
   const onClickLanguage = () => {
     switch (activeIndex) {
@@ -201,12 +264,9 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
     }
   }
 
-  const onClickBack = () => {
-    setHide(false)
-    setHide1(false)
-  }
-
-
+const onClickBack = () => {
+    window.location.reload()
+}
 
   return (
     <div className='container'>
@@ -239,6 +299,17 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
                     </div>
                     <button onClick={onClickStart2} className='button'>{langData[activeIndex].guideButton}</button>
                 </div>
+            </div>
+            <div className={hide14 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className='row2 clocktime'>
+                    <p>{hours} :</p>
+                    {/* <p>{hoursTwo} :</p> */}
+                    <p>{minutes} :</p>
+                    {/* <p>{minutesTwo} :</p> */}
+                    {/* <p>{secondsTwo}</p> */}
+                    <p>{seconds}</p>
+                </div>
+                <button onClick={onClickBack} className='button timebutton'>{langData[activeIndex].guideButton}</button>
             </div>
             {/*  */}
             

@@ -340,6 +340,25 @@ body{
         display: none;
         transition: all .3 ease-in-out;
     }
+    
+    .clocktime{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        p{
+            font-size: 52px;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+    }
+    .timebutton{
+        position: absolute;
+        top: 70%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+    }
+
     .headerMiddle2, .headerMiddle2Hide{
         text-align: center;
         .eye2{
