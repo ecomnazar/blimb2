@@ -22,6 +22,8 @@ body{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .row{
@@ -29,6 +31,7 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: -20px;
 }
 
 .row2{
@@ -73,9 +76,32 @@ body{
 
 .header{
     padding-top: 100px;
+    .mini{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .relax{
+                font-size: 16px;
+            }
+            .count{
+                font-size: 55px;
+            }
+            .wait{
+            }
+    }
+    .mini2{
+        width: 50%;
+    }
     .eye1{
         opacity: 1;
         transition: all 1s ease-in-out;
+    }
+    .showrec{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .eye3{
         opacity: 0;
@@ -106,7 +132,7 @@ body{
     .headerMiddle, .headerMiddleHide{
         width: 625px;
         margin: 0 auto;
-        margin-top: -130px;
+        margin-top: -70px;
         h2{
             font-weight: normal;
             color: $color1;
@@ -147,6 +173,7 @@ body{
         }
         .wait{
             text-align: center;
+            margin-top: 50px;
         }
         .box{
             width: 30px;
@@ -156,111 +183,104 @@ body{
             left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            background-color: $color3;
+            background-color: $color2;
             animation-name: box;
-            animation-duration: 5s;
+            animation-duration: 3.5s;
             animation-iteration-count: infinite;
         }
         @keyframes box {
             0%{
                 top: 15%;
+                opacity: 1;
             }
-            20%{
+            25%{
                 top: 50%;
+                opacity: .5;
             }
-            40%{
-                top: 85%;
+            50%{
+                top: 95%;
+                opacity: 1;
             }
-            60% {
+            75%{
                 top: 50%;
+                opacity: .5;
             }
-            100% {
+            100%{
                 top: 15%;
+                opacity: 1;
             }
         }
         .box2{
             width: 30px;
             height: 30px;
             position: fixed;
-            top: 50%;
+            top: 60%;
             left: 15%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            background-color: $color3;
+            background-color: $color2;
             animation-name: box2;
-            animation-duration: 4s;
+            animation-duration: 4.5s;
             animation-iteration-count: infinite;
         }
         @keyframes box2 {
             0%{
-                left: 15%;
+                left: 5%;
+                opacity: 1;
             }
-            20%{
+            25%{
                 left: 50%;
+                opacity: .5;
             }
-            40%{
-                left: 85%;
+            50%{
+                left: 95%;
+                opacity: 1;
             }
-            60% {
+            75%{
                 left: 50%;
+                opacity: .5;
             }
-            100% {
-                left: 15%;
+            100%{
+                left: 5%;
+                opacity: 1;
             }
         }
         .box3{
             width: 30px;
             height: 30px;
             position: fixed;
-            top: 50%;
-            left: 15%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
-            background-color: $color3;
+            background-color: $color2;
             animation-name: box3;
-            animation-duration: 10s;
+            animation-duration: 4s;
             animation-iteration-count: infinite;
         }
         @keyframes box3 {
             0%{
-                left: 15%;
-                top: 15%;
+                left: 5%;
+                bottom: 5%;
+                opacity: .5;
             }
-            10%{
-                left: 50%;
-                top: 50%;
-            }
-            20%{
-                left: 85%;
-                top: 85%;
-            }
-            30%{
-                left: 50%;
-                top: 85%;
-            }
-            40%{
-                left: 15%;
-                top: 85%;
+            25%{
+                left: 5%;
+                bottom: 75%;
+                opacity: 1;
             }
             50%{
-                left: 50%;
-                top: 50%;
+                left: 95%;
+                bottom: 5%;
+                opacity: .5;
             }
-            60% {
-                left: 85%;
-                top: 15%;
+            75%{
+                left: 95%;
+                bottom: 75%;
+                opacity: 1;
             }
-            70%{
-                left: 50%;
-                top: 15%;
-            }
-            80%{
-                left: 15%;
-                top: 15%;
-            }
-            100% {
-                left: 15%;
-                top: 15%;
+            100%{
+                left: 5%;
+                bottom: 5%;
+                opacity: .5;
             }
         }
         .box4{
@@ -294,38 +314,46 @@ body{
             width: 30px;
             height: 30px;
             position: fixed;
-            top: 60%;
-            left: 49%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
             background-color: $color1;
-            animation: box5 5s linear infinite;
+            animation: box5 4s linear infinite;
         }
         @keyframes box5 {
             0%{
-                transform: rotate(0deg) translate(-160px) rotate(0deg);
+                transform: rotate(0deg) translate(-260px) rotate(0deg);
             }
             100%{
-                transform: rotate(360deg) translate(-160px) rotate(-360deg);
+                transform: rotate(360deg) translate(-260px) rotate(-360deg);
             }
         }
         .box6{
             width: 30px;
             height: 30px;
             position: fixed;
-            top: 60%;
-            left: 49%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             border-radius: 50%;
             background-color: $color1;
-            animation: box6 5s linear infinite;
+            animation: box6 6s linear infinite;
         }
         @keyframes box6 {
             0%{
-                transform: rotate(360deg) translate(-160px) rotate(-360deg);
+                transform: rotate(360deg) translate(-360px) rotate(-360deg);
+            }
+            50%{
+                transform: rotate(0deg) translate(-180px) rotate(0deg);
+            }
+            75%{
+                transform: rotate(-100deg) translate(-30px) rotate(0deg);
+                opacity: .7;
             }
             100%{
-                transform: rotate(0deg) translate(-160px) rotate(0deg);
+                transform: rotate(-160deg) translate(60px);
+                opacity: 0;
             }
         }
     }
@@ -339,6 +367,15 @@ body{
         visibility: hidden;
         display: none;
         transition: all .3 ease-in-out;
+    }
+    
+    .recomend-two{
+        text-decoration: none;
+        color: $color1;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .clocktime{
@@ -363,6 +400,8 @@ body{
         text-align: center;
         .eye2{
             width: 100px;
+            margin-top: -50px;
+            margin-bottom: 100px;
             cursor: pointer;
         }
         button{
@@ -396,6 +435,168 @@ body{
         }
         a{
             display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .header{
+        .headerMiddle, .headerMiddle{
+            .box4{
+                top: 58%;
+            }
+        }
+        .mini{
+            position: absolute;
+            top: 55%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            .relax{
+                font-size: 16px;
+            }
+            .count{
+                font-size: 55px;
+            }
+            .wait{
+            }
+        }
+        .showrec{
+            top: 50%;
+            width: 50%;
+            h2{
+                font-size: 15px; 
+            }
+            p{
+                font-size: 8px;
+            }
+            button{
+                font-size: 8px;
+                border: 2px solid $color2;
+                padding: 6px 16px;
+            }
+        }
+    }
+    .startdiv{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .banner{
+        h3{
+            font-size: 14px;        
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .startdiv{
+        button{
+            font-size: 11px;
+        }
+        a{
+            font-size: 11px;
+        }
+    }
+    .banner{
+        h3{
+            font-size: 10px;        
+        }
+        p{
+            font-size: 8px;
+        }
+    }
+}
+
+@media only screen and (max-width: 525px){
+    .header{
+            .timebutton{
+                font-size: 12px;
+                position: absolute;
+                top: 65%;
+                left: 50%;
+                transform: translateX(-60%);
+            }
+            .recomend-two{
+                font-size: 12px;
+                position: absolute;
+                top: 75%;
+                left: 51%;
+            }
+            .clocktime{
+                p{
+                    font-size: 24px;
+                    margin: 0;
+                    margin-right: 4px;
+                }
+            }
+            .mini2{
+                font-size: 12px;
+                button{
+                    font-size: 10px;
+                    padding: 8px 16px;
+                }
+                h2{
+                    font-size: 18px;
+                }
+            }
+    }
+}
+
+@media only screen and (max-width: 420px){
+    .header{
+        .timebutton{
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .header{
+        .showrec{
+            top: 50%;
+            width: 70%;
+            h2{
+                font-size: 15px; 
+            }
+            p{
+                font-size: 8px;
+            }
+            button{
+                font-size: 8px;
+                border: 2px solid $color2;
+                padding: 6px 16px;
+            }
+        }
+    }
+    .banner{
+        h3{
+            font-size: 8px;        
+        }
+        p{
+            font-size: 7px;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .startdiv{
+        button{
+            font-size: 9px;
+        }
+        a{
+            font-size: 9px;
+        }
+    }
+    .banner{
+        h3{
+            font-size: 8px;        
+        }
+        p{
+            font-size: 7px;
         }
     }
 }

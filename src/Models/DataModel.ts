@@ -9,6 +9,8 @@ export interface IData{
     guideTitle4: string,
     guideCheck: string,
     guideButton: string,
+    guideButtonTwo: string,
+    recom: string,
     relax: string,
     wait: string,
     upDown: string,

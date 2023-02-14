@@ -281,11 +281,14 @@ const onClickBack = () => {
             </div>
             <div className={hide ? 'headerMiddle2Hide' : 'headerMiddle2'}>
                 <img className='eye2' src="images/eye.png" alt="" />
-                <button className='button' onClick={onClickStart}>Начать зарядку для глаз</button>
-                <a href="">Рекомендации</a>
+                <div className="startdiv">
+                <button className='button' onClick={onClickStart}>{langData[activeIndex].guideButtonTwo}</button>
+                <a href="">{langData[activeIndex].recom}</a>
+                </div>
             </div>
             {/*  */}
             <div className={hide1 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini mini2">
                 <h2>{langData[activeIndex].guide}</h2>
                 <p>{langData[activeIndex].guideTitle}</p>
                 <p>{langData[activeIndex].guideTitle1}</p>
@@ -299,6 +302,7 @@ const onClickBack = () => {
                     </div>
                     <button onClick={onClickStart2} className='button'>{langData[activeIndex].guideButton}</button>
                 </div>
+                </div>
             </div>
             <div className={hide14 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className='row2 clocktime'>
@@ -309,73 +313,98 @@ const onClickBack = () => {
                     {/* <p>{secondsTwo}</p> */}
                     <p>{seconds}</p>
                 </div>
-                <button onClick={onClickBack} className='button timebutton'>{langData[activeIndex].guideButton}</button>
+                <button onClick={onClickBack} className='button timebutton'>{langData[activeIndex].guideButtonTwo}</button>
+                <a href="" className='recomend-two'>{langData[activeIndex].recom}</a>
             </div>
             {/*  */}
             
             <div className={hide2 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box4"></div>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].relax}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait}</p>
+                </div>
             </div>
             <div className={hide3 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].upDown}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait1}</p>
+                </div>
                 <div className="box"></div>
             </div>
             <div className={hide4 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].eyes}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait2}</p>
+                </div>
             </div>
             <div className={hide5 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box2"></div>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].leftRight}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait3}</p>
+                </div>
             </div>
             <div className={hide6 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box3"></div>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].diagonal}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait4}</p>
+                </div>
             </div>
             <div className={hide7 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].eyes2}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait5}</p>
+                </div>
             </div>
             <div className={hide8 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box5"></div>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].clock}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait6}</p>
+                </div>
             </div>
             <div className={hide9 ? 'headerMiddle' : 'headerMiddleHide'}>
                 <div className="box6"></div>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].spyral}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait7}</p>
+                </div>
             </div>
             <div className={hide10 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].eyes3}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait8}</p>
+                </div>
             </div>
             <div className={hide11 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].near}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait9}</p>
+                </div>
             </div>
             <div className={hide12 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].relax2}</h2>
                 <p className='count'>{count}</p>
                 <p className='wait'>{langData[activeIndex].wait10}</p>
+                </div>
             </div>
             <div className={hide13 ? 'headerMiddle' : 'headerMiddleHide'}>
+                <div className="mini">
                 <h2 className='relax'>{langData[activeIndex].good}</h2>
+                </div>
             </div>
         </div>
     </div>
