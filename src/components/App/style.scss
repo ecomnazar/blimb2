@@ -76,6 +76,31 @@ body{
 
 .header{
     padding-top: 100px;
+    .ring{
+        position: relative;
+        p{
+            margin-left: 10px;
+            border: 2px solid #fff;
+            padding: 4px 8px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        ul{
+            position: absolute;
+            top: 200%;
+            left: 27%;
+            li{
+                list-style: none;
+                margin-bottom: 5px;
+                border: 2px solid white;
+                color: #fff;
+                padding: 4px 8px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
     .mini{
             position: absolute;
             top: 55%;

@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction } from 'react'
 import { IData } from '../../Models/DataModel'
 import { AppContext } from '../App/App'
 import song from '../../../public/music.wav'
+import song2 from '../../../public/music2.mp3'
 import {Howl} from 'howler'
 
 interface HeaderProps{
@@ -12,9 +13,23 @@ interface HeaderProps{
 
 export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) => {
 
+    const songList = ['song', 'song2']
+    const ringIcon = ['1', '2', '3']
+    const [songIndex, setSongIndex] = React.useState(0)
+    const [ringHide, setRingHide] = React.useState(false)
+
+    const onClickIndex1 = () => {
+        setSongIndex(0)
+        setRingHide(false)
+    }
+    const onClickIndex2 = () => {
+        setSongIndex(1)
+        setRingHide(false)
+    }
+
   const soundPlay = () => {
     const Sounds = new Howl({
-        src: [song]
+        src: songIndex === 0 ? song : song2
       })
       Sounds.play()
       console.log("sound")
@@ -277,6 +292,13 @@ const onClickBack = () => {
                 </div>
                 <div className='row2'>
                     <h2 onClick={onClickLanguage}>{languages[activeIndex]}</h2>
+                    <div className='ring'>
+                        <p onClick={() => setRingHide(!ringHide)}>{ringIcon[songIndex]}</p>
+                        {ringHide && <ul>
+                            <li onClick={onClickIndex1}>1</li>
+                            <li onClick={onClickIndex2}>2</li>
+                        </ul>}
+                    </div>
                 </div>
             </div>
             <div className={hide ? 'headerMiddle2Hide' : 'headerMiddle2'}>
