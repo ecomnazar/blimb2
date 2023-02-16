@@ -14,7 +14,7 @@ interface HeaderProps{
 export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) => {
 
     const songList = ['song', 'song2']
-    const ringIcon = ['1', '2', '3']
+    const ringIcon = ['images/bell.png', 'images/bell2.png', '3']
     const [songIndex, setSongIndex] = React.useState(0)
     const [ringHide, setRingHide] = React.useState(false)
 
@@ -293,10 +293,10 @@ const onClickBack = () => {
                 <div className='row2'>
                     <h2 onClick={onClickLanguage}>{languages[activeIndex]}</h2>
                     <div className='ring'>
-                        <p onClick={() => setRingHide(!ringHide)}>{ringIcon[songIndex]}</p>
+                        <p onClick={() => setRingHide(!ringHide)}><img className='thirdbell' src={ringIcon[songIndex]} alt="" /></p>
                         {ringHide && <ul>
-                            <li onClick={onClickIndex1}>1</li>
-                            <li onClick={onClickIndex2}>2</li>
+                            <li onClick={onClickIndex1}><img src="images/bell.png" alt="" /></li>
+                            <li onClick={onClickIndex2}><img className='secondbell' src="images/bell2.png" alt="" /></li>
                         </ul>}
                     </div>
                 </div>
