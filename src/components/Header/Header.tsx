@@ -15,6 +15,7 @@ interface HeaderProps{
 export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) => {
 
     const [hideVolume, setHideVolume] = React.useState(false)
+    const [volume, setVolume] = React.useState<number>(0)
     const songList = ['song', 'song2']
     const ringIcon = ['images/bell.png', 'images/bell2.png', '3']
     const [songIndex, setSongIndex] = React.useState(0)
@@ -22,7 +23,8 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
 
   const soundPlay = () => {
     const Sounds = new Howl({
-        src: songIndex === 0 ? song : song2
+        src: songIndex === 0 ? song : song2,
+        volume: volume / 100
       })
       Sounds.play()
       console.log("sound")
@@ -30,14 +32,16 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
 
   const soundPlay2 = () => {
     const Sounds = new Howl({
-        src: song2
+        src: song2,
+        volume: volume / 100
       })
       Sounds.play()
   }
 
   const soundPlay3 = () => {
     const Sounds = new Howl({
-        src: song
+        src: song,
+        volume: volume / 100
       })
       Sounds.play()
   }
@@ -303,6 +307,11 @@ const onClickBack = () => {
     window.location.reload()
 }
 
+    const rangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setVolume(e.target.value)
+        console.log(volume)
+    }
+
   return (
     <div className='container'>
         <div className="header">
@@ -310,7 +319,7 @@ const onClickBack = () => {
                 <div>
                     <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" />
                     <div className={hideVolume ? 'showVolume' : 'hideVolume'}>
-                        <Slider />
+                        <input className='volume' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
                     </div>
                 </div>
                 <div className='row2'>

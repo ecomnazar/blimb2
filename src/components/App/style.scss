@@ -15,6 +15,12 @@ $color3: #333;
     transition: all .5s ease-in-out;
 }
 
+.volume{
+    position: absolute;
+    top: 30%;
+    right: 3%;
+}
+
 .SliderRoot {
   position: fixed;
   top: 30%;
