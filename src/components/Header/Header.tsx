@@ -18,15 +18,6 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
     const [songIndex, setSongIndex] = React.useState(0)
     const [ringHide, setRingHide] = React.useState(false)
 
-    const onClickIndex1 = () => {
-        setSongIndex(0)
-        setRingHide(false)
-    }
-    const onClickIndex2 = () => {
-        setSongIndex(1)
-        setRingHide(false)
-    }
-
   const soundPlay = () => {
     const Sounds = new Howl({
         src: songIndex === 0 ? song : song2
@@ -34,6 +25,33 @@ export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) =
       Sounds.play()
       console.log("sound")
   }
+
+  const soundPlay2 = () => {
+    const Sounds = new Howl({
+        src: song2
+      })
+      Sounds.play()
+  }
+
+  const soundPlay3 = () => {
+    const Sounds = new Howl({
+        src: song
+      })
+      Sounds.play()
+  }
+
+
+  const onClickIndex1 = () => {
+    setSongIndex(0)
+    setRingHide(false)
+    soundPlay3()
+}
+const onClickIndex2 = () => {
+    setSongIndex(1)
+    setRingHide(false)
+    soundPlay2()
+}
+
 
   const languages = ['Ru', 'En', 'Ua']
   const [hide, setHide] = React.useState(false)
