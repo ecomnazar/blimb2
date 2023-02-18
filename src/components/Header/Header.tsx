@@ -4,6 +4,7 @@ import { AppContext } from '../App/App'
 import song from '../../../public/music.wav'
 import song2 from '../../../public/music2.mp3'
 import {Howl} from 'howler'
+import Slider from '../Slider/Slider'
 
 interface HeaderProps{
     langData: IData[],
@@ -13,6 +14,7 @@ interface HeaderProps{
 
 export const Header = ({ langData, activeIndex, setActiveIndex }: HeaderProps) => {
 
+    const [hideVolume, setHideVolume] = React.useState(false)
     const songList = ['song', 'song2']
     const ringIcon = ['images/bell.png', 'images/bell2.png', '3']
     const [songIndex, setSongIndex] = React.useState(0)
@@ -307,6 +309,9 @@ const onClickBack = () => {
             <div className="row">
                 <div>
                     <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" />
+                    <div className={hideVolume ? 'showVolume' : 'hideVolume'}>
+                        <Slider />
+                    </div>
                 </div>
                 <div className='row2'>
                     <h2 onClick={onClickLanguage}>{languages[activeIndex]}</h2>
@@ -316,6 +321,9 @@ const onClickBack = () => {
                             <li onClick={onClickIndex1}><img src="images/bell.png" alt="" /></li>
                             <li onClick={onClickIndex2}><img className='secondbell' src="images/bell2.png" alt="" /></li>
                         </ul>}
+                    </div>
+                    <div className="ring">
+                        <p onClick={() => setHideVolume(!hideVolume)}><img className='thirdbell' src='images/volume.png' alt="" /></p>
                     </div>
                 </div>
             </div>

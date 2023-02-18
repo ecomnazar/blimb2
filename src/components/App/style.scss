@@ -2,6 +2,61 @@ $color1: #fff;
 $color2: #eee;
 $color3: #333;
 
+
+.hideVolume{
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.showVolume{
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.SliderRoot {
+  position: fixed;
+  top: 30%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  width: 200px;
+  height: 20px;
+}
+
+.SliderTrack {
+  background-color: blue;
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: 3px;
+}
+
+.SliderRange {
+  position: absolute;
+  background-color: #e5e5e5;
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.SliderThumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px black;
+  border-radius: 10px;
+}
+.SliderThumb:hover {
+}
+.SliderThumb:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px var(--blackA8);
+}
+
 *{
     margin: 0;
     padding: 0;
