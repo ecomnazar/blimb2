@@ -3,91 +3,92 @@ $color2: #eee;
 $color3: #333;
 
 
-.hideVolume{
+.hideVolume {
     visibility: hidden;
     opacity: 0;
     transition: all .5s ease-in-out;
 }
 
-.showVolume{
+.showVolume {
     visibility: visible;
     opacity: 1;
     transition: all .5s ease-in-out;
 }
 
-.volume{
+.volume {
     position: absolute;
     top: 30%;
     right: 3%;
 }
 
 .SliderRoot {
-  position: fixed;
-  top: 30%;
-  right: 5%;
-  display: flex;
-  align-items: center;
-  user-select: none;
-  touch-action: none;
-  width: 200px;
-  height: 20px;
+    position: fixed;
+    top: 30%;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    touch-action: none;
+    width: 200px;
+    height: 20px;
 }
 
 .SliderTrack {
-  background-color: blue;
-  position: relative;
-  flex-grow: 1;
-  border-radius: 9999px;
-  height: 3px;
+    background-color: blue;
+    position: relative;
+    flex-grow: 1;
+    border-radius: 9999px;
+    height: 3px;
 }
 
 .SliderRange {
-  position: absolute;
-  background-color: #e5e5e5;
-  border-radius: 9999px;
-  height: 100%;
+    position: absolute;
+    background-color: #e5e5e5;
+    border-radius: 9999px;
+    height: 100%;
 }
 
 .SliderThumb {
-  display: block;
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  box-shadow: 0 2px 10px black;
-  border-radius: 10px;
-}
-.SliderThumb:hover {
-}
-.SliderThumb:focus {
-  outline: none;
-  box-shadow: 0 0 0 5px var(--blackA8);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px black;
+    border-radius: 10px;
 }
 
-*{
+.SliderThumb:hover {}
+
+.SliderThumb:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px var(--blackA8);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.root{
+.root {
     width: 100%;
     height: 100vh;
     background: linear-gradient(90deg, #735A80, #4D7394);
     overflow: hidden;
 }
 
-body{
+body {
     font-family: sans-serif;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,12 +96,12 @@ body{
     margin-top: -20px;
 }
 
-.row2{
+.row2 {
     display: flex;
     align-items: center;
 }
 
-.button{
+.button {
     background-color: transparent;
     border: 4px solid $color1;
     color: $color1;
@@ -113,7 +114,7 @@ body{
 
 /*  */
 
-.banner{
+.banner {
     position: fixed;
     top: 0;
     left: 0;
@@ -121,101 +122,127 @@ body{
     padding: 14px 0;
     text-align: center;
     background: linear-gradient(90deg, #4c3b55, #3a5368);
-    h3{
+
+    h3 {
         font-weight: normal;
         color: $color1;
         font-size: 20px;
         margin: 0;
         padding: 0;
     }
-    p{
+
+    p {
         color: $color1;
         font-size: 14px;
         margin-top: 8px;
     }
 }
 
-.header{
+.header {
     padding-top: 100px;
-    .ring{
+
+    .ring {
         position: relative;
-        .thirdbell{
+
+        .thirdbell {
             margin-left: 0 !important;
             width: 23px !important;
         }
-        p{
+
+        p {
             margin-left: 10px;
-            border: 2px solid #fff;
             padding: 4px 8px;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
         }
-        ul{
+
+        ul {
             position: absolute;
             top: 175%;
             left: 17%;
-            li{
+
+            li {
                 list-style: none;
                 margin-bottom: 5px;
-                border: 2px solid white;
                 color: #fff;
                 padding: 4px 8px;
                 border-radius: 5px;
                 cursor: pointer;
-                img, .secondbell{
+
+                img,
+                .secondbell {
                     margin: 0 !important;
                     width: 25px !important;
                 }
-                .secondbell{
+
+                .secondbell {
                     width: 20px !important;
                     padding: 2px 0;
                 }
             }
         }
     }
-    .mini{
-            position: absolute;
-            top: 55%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            .relax{
-                font-size: 16px;
-            }
-            .count{
-                font-size: 55px;
-            }
-            .wait{
-            }
+
+    .mini {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .relax {
+            font-size: 16px;
+        }
+
+        .count {
+            font-size: 55px;
+        }
+
+        .wait {}
     }
-    .mini2{
+
+    .mini2 {
         width: 50%;
     }
-    .eye1{
+
+    .eye1 {
         opacity: 1;
         transition: all 1s ease-in-out;
     }
-    .showrec{
+
+    .showrec {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translateX(-50%);
     }
-    .eye3{
+
+    .eye3 {
         opacity: 0;
         transition: all 1s ease-in-out;
     }
-    .row{
-        .eye{
+
+    .row {
+        .eyebackground{
+            background-image: url(images/eye.png);
+            background-position: top;
+            background-size: cover;
+            width: 60px;
+            height: 35px;
+        }
+        .eye {
             width: 70px;
             cursor: pointer;
+            display: none;
         }
-        .row2{
-            img{
+
+        .row2 {
+            img {
                 margin-left: 20px;
                 width: 30px;
             }
-            h2{
+
+            h2 {
                 font-size: 14px;
                 font-weight: normal;
                 color: $color2;
@@ -229,53 +256,65 @@ body{
             }
         }
     }
-    .headerMiddle, .headerMiddleHide{
+
+    .headerMiddle,
+    .headerMiddleHide {
         width: 625px;
         margin: 0 auto;
         margin-top: -70px;
-        h2{
+        h2 {
             font-weight: normal;
             color: $color1;
             font-size: 35px;
             margin-bottom: 30px;
         }
-        p{
+
+        p {
             color: $color1;
             margin-bottom: 15px;
         }
-        .row2{
-            p{
+
+        .row2 {
+            p {
                 margin-bottom: 1px;
                 margin-left: 3px;
             }
         }
-        .checkButton{
+
+        .checkButton {
             margin-top: 30px;
         }
-        button{
+
+        button {
             margin-left: 25px;
-            &:hover{
+
+            &:hover {
                 border-color: rgb(90, 89, 89);
                 transition: all .2s ease-in-out;
             }
         }
-        .check{
+
+        .check {
             background-color: transparent;
             padding: 20px;
         }
-        .relax{
+
+        .relax {
             text-align: center;
         }
-        .count{
+
+        .count {
             text-align: center;
             font-size: 90px;
             font-weight: bold;
         }
-        .wait{
+
+        .wait {
             text-align: center;
             margin-top: 50px;
         }
-        .box{
+
+        .box {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -288,29 +327,35 @@ body{
             animation-duration: 3.5s;
             animation-iteration-count: infinite;
         }
+
         @keyframes box {
-            0%{
+            0% {
                 top: 15%;
                 opacity: 1;
             }
-            25%{
+
+            25% {
                 top: 50%;
                 opacity: .5;
             }
-            50%{
+
+            50% {
                 top: 95%;
                 opacity: 1;
             }
-            75%{
+
+            75% {
                 top: 50%;
                 opacity: .5;
             }
-            100%{
+
+            100% {
                 top: 15%;
                 opacity: 1;
             }
         }
-        .box2{
+
+        .box2 {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -323,29 +368,35 @@ body{
             animation-duration: 4.5s;
             animation-iteration-count: infinite;
         }
+
         @keyframes box2 {
-            0%{
+            0% {
                 left: 5%;
                 opacity: 1;
             }
-            25%{
+
+            25% {
                 left: 50%;
                 opacity: .5;
             }
-            50%{
+
+            50% {
                 left: 95%;
                 opacity: 1;
             }
-            75%{
+
+            75% {
                 left: 50%;
                 opacity: .5;
             }
-            100%{
+
+            100% {
                 left: 5%;
                 opacity: 1;
             }
         }
-        .box3{
+
+        .box3 {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -356,34 +407,40 @@ body{
             animation-duration: 4s;
             animation-iteration-count: infinite;
         }
+
         @keyframes box3 {
-            0%{
+            0% {
                 left: 5%;
                 bottom: 5%;
                 opacity: .5;
             }
-            25%{
+
+            25% {
                 left: 5%;
                 bottom: 75%;
                 opacity: 1;
             }
-            50%{
+
+            50% {
                 left: 95%;
                 bottom: 5%;
                 opacity: .5;
             }
-            75%{
+
+            75% {
                 left: 95%;
                 bottom: 75%;
                 opacity: 1;
             }
-            100%{
+
+            100% {
                 left: 5%;
                 bottom: 5%;
                 opacity: .5;
             }
         }
-        .box4{
+
+        .box4 {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -396,21 +453,25 @@ body{
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
         }
+
         @keyframes box4 {
-            0%{
+            0% {
                 transform: scale(1.1);
                 opacity: 1;
             }
-            50%{
+
+            50% {
                 transform: scale(.8);
                 opacity: .7;
             }
-            100%{
+
+            100% {
                 transform: scale(1.1);
                 opacity: 1;
             }
         }
-        .box5{
+
+        .box5 {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -421,15 +482,18 @@ body{
             background-color: $color1;
             animation: box5 4s linear infinite;
         }
+
         @keyframes box5 {
-            0%{
+            0% {
                 transform: rotate(0deg) translate(-260px) rotate(0deg);
             }
-            100%{
+
+            100% {
                 transform: rotate(360deg) translate(-260px) rotate(-360deg);
             }
         }
-        .box6{
+
+        .box6 {
             width: 30px;
             height: 30px;
             position: fixed;
@@ -440,36 +504,42 @@ body{
             background-color: $color1;
             animation: box6 6s linear infinite;
         }
+
         @keyframes box6 {
-            0%{
+            0% {
                 transform: rotate(360deg) translate(-360px) rotate(-360deg);
             }
-            50%{
+
+            50% {
                 transform: rotate(0deg) translate(-180px) rotate(0deg);
             }
-            75%{
+
+            75% {
                 transform: rotate(-100deg) translate(-30px) rotate(0deg);
                 opacity: .7;
             }
-            100%{
+
+            100% {
                 transform: rotate(-160deg) translate(60px);
                 opacity: 0;
             }
         }
     }
-    .headerMiddle{
+
+    .headerMiddle {
         opacity: 1;
         visibility: visible;
         transition: all .1 ease-in-out;
     }
-    .headerMiddleHide{
+
+    .headerMiddleHide {
         opacity: 0;
         visibility: hidden;
         display: none;
         transition: all .3 ease-in-out;
     }
-    
-    .recomend-two{
+
+    .recomend-two {
         text-decoration: none;
         color: $color1;
         position: absolute;
@@ -477,225 +547,323 @@ body{
         left: 50%;
         transform: translateX(-50%);
     }
-    
-    .clocktime{
+
+    .clocktime {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        p{
+
+        p {
             font-size: 52px;
             font-weight: bold;
             margin: 0 10px;
         }
     }
-    .timebutton{
+
+    .timebutton {
         position: absolute;
         top: 70%;
         left: 48%;
         transform: translate(-50%, -50%);
     }
 
-    .headerMiddle2, .headerMiddle2Hide{
+    .headerMiddle2,
+    .headerMiddle2Hide {
         text-align: center;
-        .eye2{
+        .eyebackground{
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translateX(-50%);
+            background-image: url(images/eye.png);
+            background-position: top;
+            background-size: cover;
+            width: 100px;
+            height: 57px;
+        }
+        .eye2 {
             width: 100px;
             margin-top: -50px;
             margin-bottom: 100px;
             cursor: pointer;
         }
-        button{
+
+        button {
             display: block;
             margin: 75px auto 20px;
-            &:hover{
+
+            &:hover {
                 border-color: rgb(90, 89, 89);
                 transition: all .2s ease-in-out;
             }
         }
-        a{
+
+        a {
             color: $color1;
             margin-top: 20px;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 border-bottom: 1px solid $color2;
             }
         }
     }
-    .headerMiddle2{
+
+    .headerMiddle2 {
         opacity: 1;
         visibility: visible;
         transition: all .3s ease-in-out;
     }
-    .headerMiddle2Hide{
+
+    .headerMiddle2Hide {
         opacity: 0;
         visibility: hidden;
         transition: all .3s ease-in-out;
-        button{
+
+        button {
             display: none;
         }
-        a{
+
+        a {
             display: none;
         }
     }
 }
 
-@media only screen and (max-width: 750px){
-    .header{
-        .headerMiddle, .headerMiddle{
-            .box4{
+@media only screen and (max-width: 750px) {
+    .header {
+        .headerMiddle,
+        .headerMiddle {
+            .box4 {
                 top: 58%;
             }
         }
-        .mini{
+        .mini {
             position: absolute;
             top: 55%;
             left: 51%;
             transform: translate(-50%, -50%);
-            .relax{
+            .relax {
                 font-size: 16px;
             }
-            .count{
+            .count {
                 font-size: 55px;
             }
-            .wait{
-            }
         }
-        .showrec{
+        .showrec {
             top: 50%;
             width: 50%;
-            h2{
-                font-size: 15px; 
+            h2 {
+                font-size: 15px;
             }
-            p{
+            p {
                 font-size: 8px;
             }
-            button{
+            button {
                 font-size: 8px;
                 border: 2px solid $color2;
                 padding: 6px 16px;
             }
         }
     }
-    .startdiv{
+    .startdiv {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
     }
-    .banner{
-        h3{
-            font-size: 14px;        
+
+    .banner {
+        h3 {
+            font-size: 14px;
         }
-        p{
+
+        p {
             font-size: 12px;
         }
     }
 }
 
-@media only screen and (max-width: 750px){
-    .startdiv{
-        button{
+@media only screen and (max-width: 750px) {
+    .startdiv {
+        button {
             font-size: 11px;
         }
-        a{
+
+        a {
             font-size: 11px;
         }
     }
-    .banner{
-        h3{
-            font-size: 10px;        
+
+    .banner {
+        h3 {
+            font-size: 10px;
         }
-        p{
+
+        p {
             font-size: 8px;
         }
     }
 }
 
-@media only screen and (max-width: 525px){
-    .header{
-            .timebutton{
-                font-size: 12px;
+@media only screen and (max-width: 525px) {
+    .header {
+        .timebutton {
+            font-size: 12px;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translateX(-60%);
+        }
+
+        .recomend-two {
+            font-size: 12px;
+            position: absolute;
+            top: 75%;
+            left: 51%;
+        }
+
+        .clocktime {
+            p {
+                font-size: 24px;
+                margin: 0;
+                margin-right: 4px;
+            }
+        }
+
+        .mini2 {
+            font-size: 12px;
+
+            button {
+                font-size: 10px;
+                padding: 8px 16px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .row{
+            margin-top: -50px;
+        }
+
+        .eye2{
+            margin-top: -5px !important;
+        }
+
+        .row2{
+            .lgh2{
+                font-size: 9px !important;
+                padding: 5px 4px !important;
+            }
+        }
+
+        .ring {
+            position: relative;
+
+            .thirdbell {
+                margin-left: 0 !important;
+                width: 17px !important;
+            }
+
+            p {
+                margin-left: 0px;
+                padding: 4px 8px;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            ul {
                 position: absolute;
-                top: 65%;
-                left: 50%;
-                transform: translateX(-60%);
-            }
-            .recomend-two{
-                font-size: 12px;
-                position: absolute;
-                top: 75%;
-                left: 51%;
-            }
-            .clocktime{
-                p{
-                    font-size: 24px;
-                    margin: 0;
-                    margin-right: 4px;
+                top: 175%;
+                left: -5%;
+
+                li {
+                    list-style: none;
+                    margin-bottom: 5px;
+                    color: #fff;
+                    padding: 4px 8px;
+                    border-radius: 5px;
+                    cursor: pointer;
+
+                    img,
+                    .secondbell {
+                        margin: 0 !important;
+                        width: 25px !important;
+                    }
+
+                    .secondbell {
+                        width: 20px !important;
+                        padding: 2px 0;
+                    }
                 }
             }
-            .mini2{
-                font-size: 12px;
-                button{
-                    font-size: 10px;
-                    padding: 8px 16px;
-                }
-                h2{
-                    font-size: 18px;
-                }
-            }
+        }
     }
 }
 
-@media only screen and (max-width: 420px){
-    .header{
-        .timebutton{
+
+@media only screen and (max-width: 420px) {
+    .header {
+        .timebutton {
             width: 60%;
         }
     }
 }
 
-@media only screen and (max-width: 400px){
-    .header{
-        .showrec{
+@media only screen and (max-width: 400px) {
+    .header {
+        .showrec {
             top: 50%;
             width: 70%;
-            h2{
-                font-size: 15px; 
+
+            h2 {
+                font-size: 15px;
             }
-            p{
+
+            p {
                 font-size: 8px;
             }
-            button{
+
+            button {
                 font-size: 8px;
                 border: 2px solid $color2;
                 padding: 6px 16px;
             }
         }
     }
-    .banner{
-        h3{
-            font-size: 8px;        
+
+    .banner {
+        h3 {
+            font-size: 8px;
         }
-        p{
+
+        p {
             font-size: 7px;
         }
     }
 }
 
-@media only screen and (max-width: 360px){
-    .startdiv{
-        button{
+@media only screen and (max-width: 360px) {
+    .startdiv {
+        button {
             font-size: 9px;
         }
-        a{
+
+        a {
             font-size: 9px;
         }
     }
-    .banner{
-        h3{
-            font-size: 8px;        
+
+    .banner {
+        h3 {
+            font-size: 8px;
         }
-        p{
+
+        p {
             font-size: 7px;
         }
     }

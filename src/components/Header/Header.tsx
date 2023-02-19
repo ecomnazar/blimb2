@@ -317,13 +317,14 @@ const onClickBack = () => {
         <div className="header">
             <div className="row">
                 <div>
-                    <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" />
+                    <div onClick={onClickBack} className={hide ? 'eyebackground eye1' : 'eyebackground eye3'}></div>
+                    {/* <img className={hide ? 'eye eye1' : 'eye eye3'} onClick={onClickBack} src="images/eye.png" alt="" /> */}
                     <div className={hideVolume ? 'showVolume' : 'hideVolume'}>
                         <input className='volume' onChange={(e) => rangeChange(e)} value={volume} type="range"  min='0' max='99' />
                     </div>
                 </div>
                 <div className='row2'>
-                    <h2 onClick={onClickLanguage}>{languages[activeIndex]}</h2>
+                    <h2 className='lgh2' onClick={onClickLanguage}>{languages[activeIndex]}</h2>
                     <div className='ring'>
                         <p onClick={() => setRingHide(!ringHide)}><img className='thirdbell' src={ringIcon[songIndex]} alt="" /></p>
                         {ringHide && <ul>
@@ -337,7 +338,8 @@ const onClickBack = () => {
                 </div>
             </div>
             <div className={hide ? 'headerMiddle2Hide' : 'headerMiddle2'}>
-                <img className='eye2' src="images/eye.png" alt="" />
+                {/* <img className='eye2' src="images/eye.png" alt="" /> */}
+                <div className='eyebackground'></div>
                 <div className="startdiv">
                 <button className='button' onClick={onClickStart}>{langData[activeIndex].guideButtonTwo}</button>
                 <a href="">{langData[activeIndex].recom}</a>
