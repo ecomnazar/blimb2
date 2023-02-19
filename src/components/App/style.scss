@@ -140,7 +140,12 @@ body {
 
 .header {
     padding-top: 100px;
-
+    .startdiv {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .ring {
         position: relative;
 
